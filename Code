@@ -1,0 +1,69 @@
+import java.awt.*;
+import java.awt.event.*;
+public class StudentForm1 extends Frame{
+     Label lblRno,lblName,lblAddr,lblQ,lblSubject;
+    TextField txtRno,txtName;
+    TextArea txtAddr;
+    Button btnOk,btnCancel;
+    Choice c1;
+    Checkbox chk1,chk2;
+    Panel p1;
+    
+    public StudentForm1()
+    {
+        super("Student Entry Form");
+        lblRno=new Label("Enter the Roll Number:");
+        lblRno.setBounds(10,50,150,20);
+        lblName=new Label("Enter the Name:");
+        lblName.setBounds(10,70,150,20);
+        lblAddr=new Label("Enter the Address:");
+        lblAddr.setBounds(10,90,150,20);
+        lblQ=new Label("Qualification:");
+        lblQ.setBounds(10,200,150,20);
+        lblSubject=new Label("Subjects:");
+        lblSubject.setBounds(10,230,150,20);
+        
+        txtRno=new TextField(20);
+        txtRno.setBounds(175,50,150,20);
+        txtName=new TextField(20);
+        txtName.setBounds(175,70,150,20);
+        txtAddr=new TextArea(5,4);
+        txtAddr.setBounds(175,90,400,100);
+        
+        c1=new Choice();
+         c1.add("MCA");
+         c1.add("MCS");
+         c1.add("MTech");
+         c1.add("MBA");
+         c1.add("BBA");
+         c1.add("B.Tech");
+         c1.setBounds(175,200,150,20);
+         
+         chk1=new Checkbox("C++");
+         chk1.setBounds(175,230,150,20);
+         
+         chk2=new Checkbox("JAVA");
+         chk2.setBounds(175,260,150,20);
+        btnOk=new Button("OK");
+        btnOk.setBounds(175,300,150,20);
+        btnCancel=new Button("Cancel");
+        btnCancel.setBounds(350,300,150,20);
+        p1=new Panel(null);
+        add(p1);
+        p1.add(lblRno); p1.add(txtRno);
+        p1.add(lblName); p1.add(txtName);
+        p1.add(lblAddr); p1.add(txtAddr);
+        p1.add(lblSubject); p1.add(lblQ);  p1.add(c1);
+        p1.add(chk1); p1.add(chk2);
+        p1.add(btnOk);p1.add(btnCancel);
+        
+        setSize(800, 600);
+        setVisible(true);
+        p1.setBackground(Color.yellow);
+    }
+    
+    public static void main(String[] args) {
+        StudentForm1 st=new StudentForm1();
+       }
+}
+
